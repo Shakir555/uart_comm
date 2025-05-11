@@ -4,7 +4,7 @@ This repository is dedicated to experiment with **UART (Universal Asynchronous R
 using a **serial port interface** across various software platform. Different software frameworks and libraries might be involve. Trial and error is part of the process, as this project serves as research and learning environment for understanding reliable UART-based communication.
 
 ## Objectives
-![UART Communication Diagram](Diagram/uart_comm.png)
+![UART Communication Diagram](Diagram/uart_comm.jpg)
 
 - Understand UART Communication
 - Experiment with data trasnmission and reception over serial port.
