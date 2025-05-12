@@ -12,6 +12,8 @@ using a **serial port interface** across various software platform. Different so
 - Build and test custom protocols on top of UART.
 - Use different software framework to handle UART on both the embedded and host side.
 
+© 2025 Written by Shakir Salam
+
 
 
 
