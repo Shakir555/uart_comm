@@ -1,10 +1,17 @@
 # Host Controller
 ## Linux Environment
-1. Install using apt
+1. Install required package using apt
 
+Qt Libraries
  ```bash
 sudo apt update
 sudo apt install qt5-qmake qtbase5-dev
+```
+
+Make Tool
+```bash
+sudo apt update
+sudo apt install make
 ```
 
 2. Create Qt Project
@@ -23,9 +30,9 @@ touch MyQtApp.pro
 int main (int argc, char *argv[])
 {
  QApplication app(argc, argv);
- QLabel label("Hello, Qt!")
- label.show()
- return app.exec()
+ QLabel label("Hello, Qt!");
+ label.show();
+ return app.exec();
 }
 ```
 
