@@ -18,9 +18,15 @@ touch MyQtApp.pro
 3. Create main.cpp
 ```bash
 #include <QApplication>
-QLabel label("Hello, Qt!")
-label.show()
-return app.exec()
+#include <QLabel>
+
+int main (int argc, char *argv[])
+{
+ QApplication app(argc, argv);
+ QLabel label("Hello, Qt!")
+ label.show()
+ return app.exec()
+}
 ```
 
 4. Create MyQtApp.pro
