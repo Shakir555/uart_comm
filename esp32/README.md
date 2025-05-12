@@ -8,4 +8,5 @@
 - The physical connection typically uses a USB-to-UART bridge (CP2102), which converts the USB signals
   from the PC into UART signals readable by the ESP32.
 
+© 2025 Written by Shakir Salam
 
