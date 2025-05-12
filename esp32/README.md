@@ -1,6 +1,6 @@
 <img src="../Diagram/esp_hardware_config.png" alt="ESP32 UART Config" width="400"/>
 
-# PC Host (pyserial & pyqt) and ESP32 Uart Comm (esp-idf)
+# PC Host (pyserial & pyqt) and ESP32 (esp-idf) Uart Comm 
 - The PC Host runs on GUI built with PyQT5 and uses the "pyserial" library to establish
   manage UART Communication.
 - The application provides a user-friendly interface to send commands, display responses, and monitor
