@@ -1,6 +1,6 @@
 # Host Controller
 ## Linux Environment
-###1. Install required package using apt
+### 1. Install required package using apt
 
 Qt Libraries
  ```bash
