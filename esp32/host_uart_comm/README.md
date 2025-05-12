@@ -16,10 +16,10 @@ sudo apt install make
 
 ### 2. Create Qt Project
 ```bash
-mkdir QtApp
-cd QtApp
+mkdir host_uart_comm
+cd host_uart_comm
 touch main.cpp
-touch MyQtApp.pro
+touch host_uart_comm.pro
 ```
 
 ### 3. Create main.cpp
@@ -29,25 +29,25 @@ touch MyQtApp.pro
 
 int main (int argc, char *argv[])
 {
- QApplication app(argc, argv);
- QLabel label("Hello, Qt!");
- label.show();
- return app.exec();
+    QApplication application(argc, argv);
+    QWidget wd;
+    qt_window(wd);
+    wd.show();
+    return application.exec();
 }
 ```
 
-### 4. Create MyQtApp.pro
+### 4. Create host_uart_comm.pro
 ```bash
-QT += core gui
-greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
-TARGET = MyQtApp
 TEMPLATE = app
-SOURCES += main.cpp
+TARGET = host_uart_comm
+QT += widgets serialport
+SOURCES += main.cpp 
 ```
 
 ### 5. Run qmake to generate Makefile
 ```bash
-qmake MyQtApp.pro
+qmake host_uart_comm.pro
 ```
 
 ### 6. Build Application
@@ -57,7 +57,7 @@ make
 
 ### 7. Run Application
 ```bash
-./MyQtApp
+./host_uart_comm
 ```
 
 ### 7. UI Interface
