@@ -1,6 +1,6 @@
 # Host Controller
 ## Linux Environment
-1. Install required package using apt
+###1. Install required package using apt
 
 Qt Libraries
  ```bash
@@ -14,7 +14,7 @@ sudo apt update
 sudo apt install make
 ```
 
-2. Create Qt Project
+###2. Create Qt Project
 ```bash
 mkdir QtApp
 cd QtApp
@@ -22,7 +22,7 @@ touch main.cpp
 touch MyQtApp.pro
 ```
 
-3. Create main.cpp
+###3. Create main.cpp
 ```bash
 #include <QApplication>
 #include <QLabel>
@@ -36,7 +36,7 @@ int main (int argc, char *argv[])
 }
 ```
 
-4. Create MyQtApp.pro
+###4. Create MyQtApp.pro
 ```bash
 QT += core gui
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
@@ -45,17 +45,17 @@ TEMPLATE = app
 SOURCES += main.cpp
 ```
 
-5. Run qmake to generate Makefile
+###5. Run qmake to generate Makefile
 ```bash
 qmake MyQtApp.pro
 ```
 
-6. Build Application
+###6. Build Application
 ```bash
 make
 ```
 
-7. Run Application
+###7. Run Application
 ```bash
 ./MyQtApp
 ```
