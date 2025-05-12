@@ -1,4 +1,4 @@
-![ESP32 UART Config](../Diagram/esp_hardware_config.png)
+<img src="../Diagram/esp_hardware_config.png" alt="ESP32 UART Config" width="400"/>
 
 # PC Host (pyserial) and ESP32 Uart Comm
 - The PC Host runs on GUI built with PyQT5 and uses the "pyserial" library to establish
