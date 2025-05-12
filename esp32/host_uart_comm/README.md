@@ -61,4 +61,4 @@ make
 ```
 
 ### 7. UI Interface
-<img src="Diagram/esp_pc_serial_port_ui.png" alt="..." />
+<img src="../../Diagram/esp_pc_serial_port_ui.png" alt="ESP32 PC Serial Port UI" width="400"/>
