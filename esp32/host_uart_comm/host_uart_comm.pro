@@ -1,4 +1,4 @@
 TEMPLATE = app
-TARGET = hello_world
+TARGET = host_uart_comm
 QT += widgets serialport
 SOURCES += main.cpp 
