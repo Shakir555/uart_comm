@@ -61,5 +61,4 @@ make
 ```
 
 ### 7. UI Interface
-- The UI interface should be display as shown below:
 <img src="../Diagram/esp_pc_serial_port_ui.png" alt="ESP32 PC Serial Port UI" width="400"/>
