@@ -1,53 +1,57 @@
-| Supported Targets | ESP32 | ESP32-C2 | ESP32-C3 | ESP32-C5 | ESP32-C6 | ESP32-C61 | ESP32-H2 | ESP32-P4 | ESP32-S2 | ESP32-S3 | Linux |
-| ----------------- | ----- | -------- | -------- | -------- | -------- | --------- | -------- | -------- | -------- | -------- | ----- |
 
-# Hello World Example
+# Device Controller
+## Linux Environment
+### 1. Install Prequisites
 
-Starts a FreeRTOS task to print "Hello World".
-
-(See the README.md file in the upper level 'examples' directory for more information about examples.)
-
-## How to use example
-
-Follow detailed instructions provided specifically for this example.
-
-Select the instructions depending on Espressif chip installed on your development board:
-
-- [ESP32 Getting Started Guide](https://docs.espressif.com/projects/esp-idf/en/stable/get-started/index.html)
-- [ESP32-S2 Getting Started Guide](https://docs.espressif.com/projects/esp-idf/en/latest/esp32s2/get-started/index.html)
-
-
-## Example folder contents
-
-The project **hello_world** contains one source file in C language [hello_world_main.c](main/hello_world_main.c). The file is located in folder [main](main).
-
-ESP-IDF projects are built using CMake. The project build configuration is contained in `CMakeLists.txt` files that provide set of directives and instructions describing the project's source files and targets (executable, library, or both).
-
-Below is short explanation of remaining files in the project folder.
-
-```
-├── CMakeLists.txt
-├── pytest_hello_world.py      Python script used for automated testing
-├── main
-│   ├── CMakeLists.txt
-│   └── hello_world_main.c
-└── README.md                  This is the file you are currently reading
+ ```bash
+sudo apt update
+sudo apt install -y git wget flex bison gperf python3 python3-pip python3-setuptools cmake ninja-build ccache libffi-dev libssl-dev dfu-util libusb-1.0-0
 ```
 
-For more information on structure and contents of ESP-IDF projects, please refer to Section [Build System](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-guides/build-system.html) of the ESP-IDF Programming Guide.
+### 2. Get ESP-IDF
+```bash
+mkdir -p ~/esp
+cd ~/esp
+git clone --recursive https://github.com/espressif/esp-idf.git
+cd esp-idf
+```
 
-## Troubleshooting
+### 3. Run Installation Script
+```bash
+./install.sh
+```
 
-* Program upload failure
+### 4. Set up Environemnt Variables
+```bash
+./export.sh
+echo ". $HOME/esp/esp-idf/export.sh" >> ~/.bashrc
+```
 
-    * Hardware connection is not correct: run `idf.py -p PORT monitor`, and reboot your board to see if there are any output logs.
-    * The baud rate for downloading is too high: lower your baud rate in the `menuconfig` menu, and try again.
+### 5. Verify Installation
+```bash
+cd ~/esp
+cp -r $IDF_PATH/examples/get-started/hello_world .
+cd hello_world
+idf.py set-target esp32
+idf.py build
+```
 
-## Technical support and feedback
+### 6. Flash the code to ESP32
+```bash
+idf.py -p /dev/ttyUSB0 flash monitor
+```
 
-Please use the following feedback channels:
+### Create a new directory for esp32 uart comm
+```bash
+cd ~/esp_uart_comm
+cp -r $IDF_PATH../main.
+cd main
+idf.py set-target esp32
+idf.py build flash monitor
+```
+<img src="../../Diagram/esp_uart_receive.png" alt="ESP32 UART Receive" width="400"/>
 
-* For technical queries, go to the [esp32.com](https://esp32.com/) forum
-* For a feature request or bug report, create a [GitHub issue](https://github.com/espressif/esp-idf/issues)
+visit espressif official documentation for more info
+https://docs.espressif.com/projects/esp-idf/en/stable/esp32/get-started/index.html
 
-We will get back to you as soon as possible.
+© 2025 Written by Shakir Salam

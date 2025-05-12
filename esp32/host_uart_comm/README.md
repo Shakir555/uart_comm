@@ -23,6 +23,7 @@ touch host_uart_comm.pro
 ```
 
 ### 3. Create main.cpp
+- Snippet of main code
 ```bash
 #include <QApplication>
 #include <QLabel>
@@ -63,5 +64,6 @@ make
 ### 7. UI Interface
 - The ui interface should displayed as shown below:
 <img src="../../Diagram/esp_pc_serial_port_ui.png" alt="ESP32 PC Serial Port UI" width="400"/>
+<img src="../../Diagram/esp_pc_uart_send.png" alt="ESP32 PC Serial Port UI" width="400"/>
 
 © 2025 Written by Shakir Salam
